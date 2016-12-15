@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+		
+		html{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font: 13px/1.5 Helvetica Neue,Arial,Helvetica,'Liberation Sans',FreeSans,sans-serif;
+            text-align: center;
+            background-color: #444444;
+            color: #fff;
+        }
+        h2{
+            color: #fff;
+            margin-top: 40px;
+        }
+        a{
+            color: #0166FF;
+        }
+
+        #kapsayici{
+            margin: 0 auto;
+            width: 800px;
+        }
+        .icerik{
+            margin: 80px auto;
+            width: 200px;
+            text-align: left;
+        }
+        .secili-kategori {
+            background: url(ok.jpg) no-repeat right;
+            background-color: #0166FF;
+            border:1px solid #222222;
+            display:block;
+            font-size:14px;
+            font-weight: bold;
+            padding:5px 5px 5px 8px;
+            position:relative;
+            text-shadow:1px 1px 1px #CCCCCC;
+            width:195px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .kategori-menu {
+            background-color: #222222;
+            display:none;
+            width:198px;
+            border: 1px solid #222222;
+            position: absolute;
+            padding: 5px;
+            overflow: hidden;
+        }
+
+        .kategori-menu li {
+            list-style-type: none outside none;
+			
+        }
+
+        .kategori-menu li a {
+            color:#FFFFFF !important;
+            text-decoration:none;
+            padding:5px 5px 7px 5px;
+            display:block;
+            text-shadow:1px 1px 1px #fff;
+			height:20px;
+        }
+
+        .kategori-menu li a:hover {
+            background-color: #0166FF;
+        }
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('a.secili-kategori').click(function () {
+                $('ul.kategori-menu').slideToggle('medium');
+                return false;
+            });
+
+            $("ul.kategori-menu li a").click(function () {
+                var text = $(this).html();
+                $(".secili-kategori").html(text);
+                $("ul.kategori-menu").slideUp();
+
+                return false;
+            });
+
+            $(document).bind('click', function (e) {
+                var $clicked = $(e.target);
+                if (!$clicked.parents().hasClass("kategori-menu"))
+                    $("ul.kategori-menu").slideUp();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="kapsayici">
+        <h2>Jquery ve CSS ile Animasyonlu Menü</h2>
+        <div class="icerik">
+            <a href="#" class="secili-kategori">Kategori Seçiniz</a>
+            <ul class="kategori-menu">
+                <li><a href="#" id="php">php</a></li>
+                <li><a href="#" id="Mysql">Mysql</a></li>
+                <li><a href="#" id="jquery">jquery</a></li>
+                <li><a href="#" id="ajax">ajax</a></li>
+                <li><a href="#" id="css">css</a></li>
+                <li><a href="#" id="html">html</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

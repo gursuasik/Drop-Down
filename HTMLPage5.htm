@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        ul.menu {list-style:none;margin:0;padding:0;font:bold 14px/24px arial, verdana, sans-serif;}
+        ul.menu  li {float:left;position:relative;}
+        li ul {display:none;list-style:none;}
+        ul li a.menu{float:none;padding:8px 10px 8px 10px;background:#333;color:#fff;display:block;text-decoration:none;
+        background: url(menu.png) no-repeat;
+        border-bottom:4px solid #ddd;
+        }
+        ul li a.menu:hover{color:#fff;background:#e91212}
+        li:hover > ul {display:block;position:absolute;margin:0;padding:0;}
+        .acilir {width:250px;display:block;position:absolute}
+        .acilir h2 {color:#333;background:#f5f5f5;display:block;margin:0 auto;padding-left:5px;font:bold 12px/24px arial, verdana, sans-serif;width:95%}
+        .acilir-ust {display:block;float:left;width:304px;height:30px;margin:-6px 0 0 0px;background:red;margin-top:5px;}
+        .acilir-ust p {font-size:11px; font-family:tahoma;color:#fff;margin-top:1px;padding-left:5px;}
+        .acilir-alt {display:block;background:url(nav2.png) no-repeat;float:left;width:304px;height:247px;}
+        .sol {width:125px;margin:10px 15px 10px 10px;float:left;display:inline;font:14px/20px arial, verdana, sans-serif;}
+        .sag {width:125px;margin:10px 15px 10px 10px;float:left;display:inline;font:14px/20px arial, verdana, sans-serif;}
+        .sol a {display:block;color:#fff;background:transparent;text-decoration:none;padding:6px}
+        .sag a {display:block;color:#fff;background:transparent;text-decoration:none;padding:6px}
+        .sol a:hover {color:#fff;background:#e91212;text-decoration:none;padding:6px;font-weight:bold;}
+        .sag a:hover {color:#fff;background:#e91212;text-decoration:none;padding:6px;font-weight:bold;}
+
+        #yukari {
+        border-bottom: 10px solid red; 
+        border-left: 7px solid transparent; 
+        border-right: 7px solid transparent; 
+        height: 0px;
+        position: absolute;
+        margin: 0px 0px 0px 16px;
+        width: 0px;
+        z-index: 2;
+        margin-top:-3px;
+        }
+    </style>
+
+
+</head>
+<body bgcolor="fuchsia">
+    <ul class="menu"><li><a class="menu" href="#">Anasayfa</a></li>
+    <li><a class="menu" href="#">Kodbeyin Nedir</a></li>
+    <li><a class="menu" href="#">Yazar Ol</a></li>
+    <li><a class="menu" href="#">RSS Abonelik</a></li>
+    <li><a class="menu" href="#">Hakkımızda</a></li>
+    <li><a class="menu" href="#">Arşiv</a></li>
+    <li><a class="menu" href="#">İletişim</a></li>
+    <li><a class="menu" href="#">Tüm Kategoriler</a> 
+        <ul class="sub">
+            <li> 
+                <div class="acilir">
+                <div id="yukari" style="border-top-color: #e90000;"></div>
+                <div class="acilir-ust">Kodbeyin.Com Kategorileri</div>
+                    <div class="acilir-alt"><div class="sol"><a href="#">CSS/HTML</a>
+                        <a href="#">jQuery</a>
+                        <a href="#">Oyun</a>
+                        <a href="#">Teknoloji</a>
+                        <a href="#">Sosyal Medya</a>
+                        <a href="#">İnternet</a></div>
+                        <div class="sag"><a href="#">Photoshop</a>
+                            <a href="#">Dreamweaver</a>
+                            <a href="#">Facebook</a>
+                            <a href="#">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </li>
+    </ul>
+</body>
+</html>
